@@ -1,25 +1,27 @@
 <template>
-  <div>
-    <h1>{{title}}</h1>
-    <ninjas />
-  </div>
+    <div>
+        <app-header/>
+        <app-footer/>
+    </div>
 </template>
 
 <script>
-import Ninjas from './components/Ninjas.vue';
+import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
 
-export default {
-  data(){
-    return {
-      title: 'Ninja app'
+export default{
+    components: {
+        'app-header': Header,
+        'app-footer': Footer
+    },
+    data(){
+        return{
+
+        }
     }
-  },
-  components: {
-    'ninjas': Ninjas
-  }
 }
 </script>
 
 <style>
-
+    
 </style>
