@@ -1,11 +1,12 @@
 <template>
     <div id="ninjas">
         <ul>
-            <li v-for="ninja in ninjas" v-on:click="ninja.show = !ninja.show">
+            <li v-for="(ninja, index) in ninjas" v-bind:key="index" v-on:click="ninja.show = !ninja.show">
                 <h1>{{ninja.name}}</h1>
                 <h3 v-show="ninja.show">{{ninja.speciality}}</h3>
             </li>
         </ul>
+        <button v-on:click="deleteNinja()">Delete Ninja</button>
     </div>
 </template>
 
@@ -21,6 +22,11 @@ export default {
     data(){
         return{
 
+        }
+    },
+    methods: {
+        deleteNinja(){
+            this.ninjas.pop()
         }
     }
 }
