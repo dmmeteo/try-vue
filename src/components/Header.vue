@@ -5,6 +5,8 @@
 </template>
 
 <script>
+import {bus} from '../main'
+
 export default{
     props: {
         title: {
@@ -18,7 +20,9 @@ export default{
     },
     methods: {
         changeTitle(){
-            this.title = 'Vue Wizards'
+            // this.$emit('changeTitle', 'Vue Wizards')
+            this.title = 'Vue Wizards'; // if comment this row title don't changed in header component
+            bus.$emit('titleChanged', 'Vue Wizards');
         }
     }
 }
