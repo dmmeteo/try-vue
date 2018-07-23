@@ -1,26 +1,19 @@
 <template>
     <div>
-        <!-- <component v-bind:is="component"></component> -->
-        <keep-alive> <!-- to save entered data -->
-            <component v-bind:is="component"></component>
-        </keep-alive>
-        <button v-on:click="component = 'form-one'">Show form one</button>
-        <button v-on:click="component = 'form-two'">Show form two</button>
+       <add-blog></add-blog>
     </div>
 </template>
 
 <script>
-import formOne from './components/formOne.vue'
-import formTwo from './components/formTwo.vue'
+import addBlog from './components/addBlog.vue'
 
-export default{
+export default {
     components: {
-        'form-one': formOne,
-        'form-two': formTwo
+        'add-blog': addBlog
     },
     data(){
         return{
-            component: 'form-one'
+            
         }
     },
     methods:{
@@ -29,6 +22,9 @@ export default{
 }
 </script>
 
-<style scoped>
-
+<style>
+body{
+    margin: 0;
+    font-family: 'Nunito SemiBold';
+}
 </style>
