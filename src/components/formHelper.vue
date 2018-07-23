@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <form>
         <h1>Please fill out our form...</h1>
         <div id="form-header">
             <slot name="form-header"></slot>
@@ -17,7 +17,7 @@
                 <li><a href="#">Link 3</a></li>
             </ul>
         </div>
-    </div>
+    </form>
 </template>
 
 <script>
