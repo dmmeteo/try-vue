@@ -6,6 +6,7 @@
            <input type="text" v-model.lazy="blog.title" required>
            <label>Blog Content:</label>
            <textarea v-model.lazy="blog.content"></textarea>
+           <textarea v-model.lazy="blog.content"></textarea>
        </form>
        <div id="preview">
            <h3>Preview Blog</h3>
